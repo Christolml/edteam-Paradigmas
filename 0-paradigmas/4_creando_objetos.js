@@ -102,5 +102,43 @@
     // 4. Clases apartir de ES6
     c('********************Clases apartir de ES6**********************')
 
+    class Dog {
+        // el constructor es un método especial que se ejecuta en el momento de instanciar la clase
+        constructor(nombre, edad, raza, genero, esterilizado) {
+            // atributos
+            this.nombre = nombre
+            this.edad = edad
+            this.raza = raza
+            this.genero = genero
+            this.esterilizado = esterilizado
+
+        }
+
+        // métodos
+        ladrar() { 
+            c('guauu guau')
+        }
+        comer(comida ) { 
+            c(`${this.nombre} come ${comida}`)
+        }
+        aparecer(imagen) {
+            d.write(`<img src="${imagen}" style="width: 800px; height: 400px;"/>`)
+        }
+    }
+
+    const perro4 =new Dog('Rocky',12,'schnauzer','Macho', false),
+        perro4_2 = new Dog('Boster',17,'Pastor aleman','Macho',true)
+
+    c(perro4, perro4_2)
+
+    perro4.ladrar()
+    perro4.comer('Tacos')
+    perro4.aparecer('https://proxy.duckduckgo.com/iu/?u=https%3A%2F%2Fcomoadiestraratuperro.com%2Fwp-content%2Fuploads%2F2016%2F02%2Fraza-de-perro-chihuahua.jpg&f=1')
+    perro4_2.ladrar()
+    perro4_2.comer('Vegetales')
+    perro4_2.aparecer('https://proxy.duckduckgo.com/iu/?u=https%3A%2F%2Ft1.uc.ltmcdn.com%2Fimages%2F4%2F5%2F1%2Fimg_como_cuidar_de_un_perro_labrador_5154_orig.jpg&f=1')
+
+
+
 
 })(console.log, document);
